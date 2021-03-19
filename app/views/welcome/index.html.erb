@@ -1,0 +1,18 @@
+<h1>Welcome to Fugue Flow</h1>
+
+<section>
+    <% if current_user %>
+      <div>
+        <h2> Lets continue your Journal!</h2>
+        # <%= link_to "Dream Journal", dashboard_path %>
+      </div>
+      
+    <% else %>
+      <div>
+        <%= link_to 'Sign In', login_path, class: "px2"%>
+        <%= link_to 'Register', register_path %>
+      </div>
+    <% end %>
+  </section>
+
+
