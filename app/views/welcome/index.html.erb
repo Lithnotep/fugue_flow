@@ -3,13 +3,13 @@
 <section>
     <% if current_user %>
       <div>
-        <h2> Lets continue your Journal!</h2>
-        # <%= link_to "Dream Journal", dashboard_path %>
+        <h2> Lets continue your Journal <%= current_user.username %>!</h2>
+       
       </div>
       
     <% else %>
       <div>
-        <%= link_to 'Sign In', login_path, class: "px2"%>
+        <%= link_to 'Sign In', login_path %>
         <%= link_to 'Register', register_path %>
       </div>
     <% end %>
