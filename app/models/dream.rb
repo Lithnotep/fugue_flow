@@ -1,4 +1,4 @@
 class Dream < ApplicationRecord
-    validates :description
-    validates :date
+    validates_presence_of :description, :date
+    belongs_to :user
 end
