@@ -18,6 +18,7 @@ RSpec.describe Dream, type: :model do
       expect(user.username).to eq('Megaman')
       expect(dream.description).to eq('What a great Dream!')
       expect(dream.date.strftime("%a, %d %b %Y")).to eq('Tue, 08 Dec 2015')
+      expect(dream.user_id).to eq(user.id)
     end
   end
 end
